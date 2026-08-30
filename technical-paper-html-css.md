@@ -29,14 +29,8 @@ Using box-sizing: border-box makes width and height easier to manage because pad
 
 HTML elements are commonly classified as inline or block elements.
 
-* Block elements start on a new line and normally take the available width. Examples: <div>, <p>, <h1>, and <section>.
-* Inline elements stay within the same line and normally take only the required width. Examples: <span>, <a>, <strong>, and <em>.
-
-```html
-<div>Block element</div>
-<span>Inline element</span>
-<a href="#">Inline link</a>
-```
+* Block elements start on a new line and normally take the available width. Examples: div, p, h1, and section.
+* Inline elements stay within the same line and normally take only the required width. Examples: span, a, strong, and em.
 
 The display property can change this behavior.
 
@@ -48,38 +42,31 @@ span {
 
 ## 3. Positioning
 
-CSS provides five important position values that control how an element is placed on a webpage.
+CSS provides five main position values that control how an element is placed on a webpage.
 
-1. `static`
-   - This is the default position of an element.
-   - The element follows the normal document flow.
-   - top, right, bottom, and left do not affect it.
+1. Static
 
-2. `relative`
-   - The element remains in the normal document flow.
-   - It can be moved from its original position using top, right, bottom, or left.
-   - Its original space is still preserved.
+   Static is the default position of an element. The element follows the normal document flow. The top, right, bottom, and left properties do not affect an element with static positioning.
 
-3. `absolute`
-   - The element is removed from the normal document flow.
-   - It is positioned relative to its nearest positioned ancestor.
-   - If no positioned ancestor exists, it is positioned relative to the initial containing block.
+2. Relative
 
-4. `fixed`
-   - The element is removed from the normal document flow.
-   - It is positioned relative to the viewport.
-   - It stays in the same position even when the page is scrolled.
-   - It is commonly used for fixed navigation bars or floating buttons.
+   Relative positioning keeps the element in the normal document flow. The element can be moved from its original position using the top, right, bottom, or left properties. Its original space remains preserved.
 
-5. `sticky`
-   - The element behaves like a relatively positioned element until a specified scroll position is reached.
-   - It then behaves like a fixed element within its containing block.
-   - It is commonly used for sticky headers and navigation elements.
+3. Absolute
 
+   Absolute positioning removes the element from the normal document flow. The element is positioned relative to its nearest positioned ancestor. If there is no positioned ancestor, it is positioned relative to the initial containing block.
+
+4. Fixed
+
+   Fixed positioning removes the element from the normal document flow and positions it relative to the viewport. The element remains in the same position when the page is scrolled.
+
+5. Sticky
+
+   Sticky positioning is a combination of relative and fixed positioning. The element initially follows the normal document flow and becomes fixed relative to its containing block when a specified scroll position is reached.
 
 ## 4. Common CSS Structural Classes
 
-Structural classes are used to organize the layout of a page. Common examples include:
+Structural classes are used to organize the layout of a webpage. Common examples include:
 
 * .container for the main content area.
 * .header for the top section.
@@ -93,7 +80,7 @@ Using meaningful class names makes HTML and CSS easier to maintain.
 
 ## 5. Common CSS Styling Classes
 
-Styling classes are commonly used to apply reusable visual properties.
+Styling classes are used to apply reusable visual properties to elements.
 
 Examples include:
 
@@ -104,14 +91,14 @@ Examples include:
 * .active for the currently selected element.
 * .border for adding borders.
 
-Reusable classes reduce repeated CSS code.
+Reusable classes reduce repeated CSS code and make styling easier to manage.
 
 ## 6. CSS Specificity
 
-CSS specificity determines which rule is applied when multiple rules target the same element. In general, specificity increases in this order:
+CSS specificity determines which CSS rule is applied when multiple rules target the same element. In general, specificity increases in the following order:
 
 1. Element selectors, such as p.
-2. Class, attribute, and pseudo-class selectors, such as .card or :hover.
+2. Class, attribute, and pseudo-class selectors, such as .card and :hover.
 3. ID selectors, such as #header.
 4. Inline styles.
 
@@ -127,11 +114,11 @@ p {
 }
 ```
 
-If a paragraph has the text class, the class rule has higher specificity and the text becomes green.
+If a paragraph has the text class, the class selector has higher specificity than the element selector, so the text becomes green.
 
 ## 7. Responsive Queries
 
-Responsive design allows a website to work on different screen sizes. CSS media queries apply styles based on conditions such as screen width.
+Responsive design allows a website to work properly on different screen sizes. CSS media queries apply different styles based on conditions such as screen width.
 
 ```css
 .container {
@@ -145,11 +132,11 @@ Responsive design allows a website to work on different screen sizes. CSS media 
 }
 ```
 
-A mobile-first approach is also commonly used, where the basic styles are designed for small screens and larger-screen styles are added with media queries.
+A mobile-first approach is also commonly used. In this approach, the basic styles are designed for smaller screens, and additional styles are added for larger screens using media queries.
 
 ## 8. Flexbox and Grid
 
-Flexbox is mainly useful for arranging items in one dimension, either as a row or a column.
+Flexbox is mainly used for arranging elements in one dimension, either as a row or a column.
 
 ```css
 .nav {
@@ -159,7 +146,7 @@ Flexbox is mainly useful for arranging items in one dimension, either as a row o
 }
 ```
 
-CSS Grid is useful for two-dimensional layouts involving rows and columns.
+CSS Grid is useful for creating two-dimensional layouts using rows and columns.
 
 ```css
 .gallery {
@@ -169,11 +156,11 @@ CSS Grid is useful for two-dimensional layouts involving rows and columns.
 }
 ```
 
-Flexbox is often suitable for navigation bars and small component layouts, while Grid is useful for larger page or gallery layouts.
+Flexbox is commonly used for navigation bars and smaller component layouts, while Grid is useful for larger page layouts and galleries.
 
 ## 9. Common Header Meta Tags
 
-Meta tags provide information about the HTML document and help browsers handle the page correctly.
+Meta tags provide information about an HTML document and help browsers handle the webpage correctly.
 
 ```html
 <meta charset="UTF-8">
@@ -181,21 +168,25 @@ Meta tags provide information about the HTML document and help browsers handle t
 <meta name="description" content="A sample HTML and CSS page">
 ```
 
-The character set supports common characters, the viewport tag improves responsive behavior on mobile devices, and the description provides a short summary of the page.
+The character set supports different characters, the viewport tag helps make webpages responsive on mobile devices, and the description provides a short summary of the webpage.
 
 ## 10. Semantic HTML and Accessibility
 
-Semantic HTML uses elements according to their meaning rather than using <div> for everything. Common semantic elements include <header>, <nav>, <main>, <section>, <article>, and <footer>.
+Semantic HTML means using HTML elements according to their meaning instead of using div elements for everything. Common semantic elements include header, nav, main, section, article, and footer.
 
-Semantic HTML improves document structure, accessibility, and search engine understanding. Images should also use meaningful alt text when appropriate.
+Semantic HTML improves the structure of a webpage and helps browsers, search engines, and assistive technologies understand the content. Images should also use meaningful alt text when appropriate.
+
+## Conclusion
+
+HTML provides the structure of a webpage, while CSS controls its appearance, layout, and responsiveness. Understanding the box model, inline and block elements, positioning, specificity, responsive queries, Flexbox, Grid, and semantic HTML provides a strong foundation for creating responsive and maintainable websites.
 
 ## References
 
-* [MDN Web Docs - HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-* [MDN Web Docs - CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [MDN Web Docs - CSS Box Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction)
-* [MDN Web Docs - CSS Positioning](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
-* [MDN Web Docs - CSS Specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Specificity)
-* [MDN Web Docs - CSS Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-* [MDN Web Docs - Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout)
-* [MDN Web Docs - CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout)
+* MDN Web Docs, HTML: https://developer.mozilla.org/en-US/docs/Web/HTML
+* MDN Web Docs, CSS: https://developer.mozilla.org/en-US/docs/Web/CSS
+* MDN Web Docs, CSS Box Model: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction
+* MDN Web Docs, CSS Positioning: https://developer.mozilla.org/en-US/docs/Web/CSS/position
+* MDN Web Docs, CSS Specificity: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Specificity
+* MDN Web Docs, CSS Media Queries: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
+* MDN Web Docs, Flexbox: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout
+* MDN Web Docs, CSS Grid: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout
